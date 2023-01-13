@@ -1,12 +1,11 @@
+import logo from './logo.svg';
 import './App.css';
-import Login from './pages/Login';
 import RouteApp from './routes';
 
 function App() {
   return (
     <>
-      <Login />
-      {/* <RouteApp /> */}
+      <RouteApp />
     </>
   );
 }
