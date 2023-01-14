@@ -27,10 +27,11 @@ function App() {
       src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Setting.png",
     },
   ];
-
-  return (
-    <>
-      {isLoggedIn ? (
+  if (!isLoggedIn) {
+    <Login />
+  }
+    return (
+      <>
         <div className="flex">
           <div
             className={`${open ? "w-72" : "w-20"
@@ -53,7 +54,7 @@ function App() {
                 className={`text-white origin-left font-medium text-cl duration-300 ${!open && "scale-0"
                   }`}
               >
-                Book Store
+                Designer
               </h1>
             </div>
             <ul className="pt-6">
@@ -69,11 +70,15 @@ function App() {
             <RouteApp />
           </div>
         </div>
-      ) : (
-        <Login />
-      )}
-    </>
-  );
+      </>
+    );
+  // return (
+  //   <>
+  //     {/* <Login /> */}
+
+  //     <RouteApp />
+  //   </>
+  // );
 }
 
 export default App;

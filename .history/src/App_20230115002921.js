@@ -53,7 +53,7 @@ function App() {
                 className={`text-white origin-left font-medium text-cl duration-300 ${!open && "scale-0"
                   }`}
               >
-                Book Store
+                Designer
               </h1>
             </div>
             <ul className="pt-6">

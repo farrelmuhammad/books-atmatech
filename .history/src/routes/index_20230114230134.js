@@ -7,19 +7,10 @@ import Login from '../pages/Login'
 const RouteApp = () => {
     const isLoggedIn = useSelector(state => state.auth.token);
 
-    const protectedRoutes = <>
-        <Route path="/dashboard" element={<Home />} />
-    </>
-
-    const guestRoutes = <>
-        <Route path="/login" element={<Login />} />
-    </>
-
     return (
         <>
             <Routes>
-                {/* {isLoggedIn ? protectedRoutes : guestRoutes} */}
-                <Route path="/dashboard" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
             </Routes>
         </>

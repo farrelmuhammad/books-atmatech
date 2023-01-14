@@ -21,6 +21,7 @@ const RouteApp = () => {
                 {/* {isLoggedIn ? protectedRoutes : guestRoutes} */}
                 <Route path="/dashboard" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+
             </Routes>
         </>
     )

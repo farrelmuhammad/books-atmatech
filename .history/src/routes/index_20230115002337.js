@@ -18,9 +18,8 @@ const RouteApp = () => {
     return (
         <>
             <Routes>
-                {/* {isLoggedIn ? protectedRoutes : guestRoutes} */}
+                {isLoggedIn ? protectedRoutes : guestRoutes}
                 <Route path="/dashboard" element={<Home />} />
-                <Route path="/login" element={<Login />} />
             </Routes>
         </>
     )
