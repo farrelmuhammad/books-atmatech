@@ -13,6 +13,16 @@ const Login = () => {
             </p>
 
             <form action="" className="flex flex-col gap-4">
+              <TextField
+                id="outlined-basic"
+                label="Outlined"
+                variant="outlined"
+              />
+              <TextField
+                id="outlined-basic"
+                label="Outlined"
+                variant="outlined"
+              />
               <input
                 className="p-2 mt-8 rounded-xl border"
                 type="text"

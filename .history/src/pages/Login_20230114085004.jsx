@@ -1,4 +1,3 @@
-import { TextField } from "@mui/material";
 import React from "react";
 
 const Login = () => {
@@ -13,21 +12,9 @@ const Login = () => {
             </p>
 
             <form action="" className="flex flex-col gap-4">
-              <input
-                className="p-2 mt-8 rounded-xl border"
-                type="text"
-                name="email"
-                placeholder="email"
-              />
-              <input
-                className="p-2 rounded-xl border"
-                type="password"
-                name="password"
-                placeholder="password"
-              />
-              <button className="bg-[#998E90] rounded-xl py-2 text-white font-bold tracking-wide">
-                Login
-              </button>
+              <input className="p-2 mt-8" type="text" name="email" placeholder="email" />
+              <input className="p-2" type="password" name="password" placeholder="password" />
+              <button>Login</button>
             </form>
           </div>
           <div className="sm:block hidden w-1/2">
