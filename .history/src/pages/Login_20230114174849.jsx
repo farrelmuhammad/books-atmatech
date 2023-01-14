@@ -16,15 +16,14 @@ const Login = () => {
     password: "",
   });
 
-  const handleSubmit = async (e) => {
-    // console.log(formData);
+  const handleSubmit = async () => {
     try {
       const res = await axios({
         method: "POST",
         url: `${Url}/auth/login`,
         data: formData,
       });
-      console.log(res);
+      console.log(res)
       dispatch(
         setData({
           token: res.data.token,
@@ -32,7 +31,7 @@ const Login = () => {
       );
       navigate(location.state?.referrer || "/");
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
   };
 
@@ -46,32 +45,23 @@ const Login = () => {
               If you already a member, easily log in
             </p>
 
-            <div className="flex flex-col gap-4">
+            <form action="" className="flex flex-col gap-4">
               <input
                 className="p-2 mt-8 rounded-xl border"
                 type="text"
                 name="email"
                 placeholder="email"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
               />
               <input
                 className="p-2 rounded-xl border"
                 type="password"
                 name="password"
                 placeholder="password"
-                onChange={(e) =>
-                  setFormData({ ...formData, password: e.target.value })
-                }
               />
-              <button
-                className="bg-[#998E90] rounded-xl py-2 text-white font-bold tracking-wide"
-                onClick={handleSubmit}
-              >
+              <button className="bg-[#998E90] rounded-xl py-2 text-white font-bold tracking-wide">
                 Login
               </button>
-            </div>
+            </form>
           </div>
           <div className="sm:block hidden w-1/2">
             <img

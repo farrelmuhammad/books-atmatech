@@ -17,23 +17,23 @@ const Login = () => {
   });
 
   const handleSubmit = async (e) => {
-    // console.log(formData);
-    try {
-      const res = await axios({
-        method: "POST",
-        url: `${Url}/auth/login`,
-        data: formData,
-      });
-      console.log(res);
-      dispatch(
-        setData({
-          token: res.data.token,
-        })
-      );
-      navigate(location.state?.referrer || "/");
-    } catch (error) {
-      console.log(error);
-    }
+    console.log(formData);
+    // try {
+    //   const res = await axios({
+    //     method: "POST",
+    //     url: `${Url}/auth/login`,
+    //     data: formData,
+    //   });
+    //   console.log(res);
+    //   dispatch(
+    //     setData({
+    //       token: res.data.token,
+    //     })
+    //   );
+    //   navigate(location.state?.referrer || "/");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

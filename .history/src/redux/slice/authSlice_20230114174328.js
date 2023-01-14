@@ -23,6 +23,6 @@ export const authSlice = createSlice({
     }
 });
 
-export const { setToken, setData, cleardata } = authSlice.actions;
+export const { setToken, setName, setProfilePhoto, setData, cleardata } = authSlice.actions;
 
 export default authSlice.reducer;

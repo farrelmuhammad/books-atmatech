@@ -25,11 +25,11 @@ const Login = () => {
         data: formData,
       });
       console.log(res);
-      dispatch(
-        setData({
-          token: res.data.token,
-        })
-      );
+    //   dispatch(
+    //     setData({
+    //       token: res.data.token,
+    //     })
+    //   );
       navigate(location.state?.referrer || "/");
     } catch (error) {
       console.log(error);
