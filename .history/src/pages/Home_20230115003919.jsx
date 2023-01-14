@@ -19,8 +19,7 @@ const Home = () => {
             }
         })
         .then((res) => {
-            const getData = res.data.data
-            console.log(getData)
+            console.log(res)
         })
         .catch((err) => {
             console.log(err);
