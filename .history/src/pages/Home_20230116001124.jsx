@@ -30,8 +30,8 @@ const Home = () => {
   return (
     <>
       <h2 className="font-bold mt-1">Daftar Buku</h2>
-      <div className="flex bg-gray-50 shadow rounded-[5px] mt-5">
-        Isi Tabel
+      <div className="flex bg-gray-400 mt-10">
+        asdas
       </div>
     </>
   );

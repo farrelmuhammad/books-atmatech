@@ -29,10 +29,7 @@ const Home = () => {
   }
   return (
     <>
-      <h2 className="font-bold mt-1">Daftar Buku</h2>
-      <div className="flex bg-gray-50 shadow rounded-[5px] mt-5">
-        Isi Tabel
-      </div>
+      <h2 className="font-bold mt-1.5">Daftar Buku</h2>
     </>
   );
 };

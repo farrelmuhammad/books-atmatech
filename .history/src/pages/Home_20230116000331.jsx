@@ -13,7 +13,7 @@ const Home = () => {
 
   async function getBooks() {
     await axios
-      .get(`${Url}/books?page=1&limit=10`, {
+      .get(`${Url}/books`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -29,10 +29,7 @@ const Home = () => {
   }
   return (
     <>
-      <h2 className="font-bold mt-1">Daftar Buku</h2>
-      <div className="flex bg-gray-50 shadow rounded-[5px] mt-5">
-        Isi Tabel
-      </div>
+      <h2>Daftar Buku</h2>
     </>
   );
 };

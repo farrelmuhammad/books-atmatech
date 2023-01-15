@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import Login from './pages/Login';
 import RouteApp from './routes';
+import 'antd/dist/reset.css';
 
 function App() {
   const [open, setOpen] = useState(true);
