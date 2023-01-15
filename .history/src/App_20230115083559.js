@@ -26,7 +26,7 @@ function App() {
       title: "Logout",
       src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Setting.png",
       onClick: function logout() {
-        localStorage.removeItem("token");
+        localStorage.removeItem("persis:auth_token");
       }
     },
   ];
@@ -64,6 +64,7 @@ function App() {
                 <li 
                 key={index} 
                 className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-white rounded-md mt-2 ${index === 0 && "bg-ligth-white"}`}
+                onClick={menu.onClick}
                 >
                   <img src={menu.src} alt="" />
                   <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>

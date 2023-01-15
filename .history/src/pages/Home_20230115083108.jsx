@@ -28,7 +28,7 @@ const Home = () => {
     }
   return (
     <>
-    <h2>Daftar Buku</h2>
+    home
     </>
   );
 };

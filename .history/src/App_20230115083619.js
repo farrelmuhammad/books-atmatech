@@ -64,6 +64,7 @@ function App() {
                 <li 
                 key={index} 
                 className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-white rounded-md mt-2 ${index === 0 && "bg-ligth-white"}`}
+                onClick={menu.onClick}
                 >
                   <img src={menu.src} alt="" />
                   <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>
