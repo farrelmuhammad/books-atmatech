@@ -89,24 +89,23 @@ const Home = () => {
       });
   }
 
-  const addBooks = async () => {
-    // console.log(formData)
-    await axios
-      .post(`${Url}/books`, {
-        data: formData,
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        // const getData = res.data;
-        console.log(res);
-        // setShowModal(false)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  async function addBooks() {
+    console.log(formData)
+    // await axios
+    //   .post(`${Url}/books`, {
+    //     data: formData,
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   })
+    //   .then((res) => {
+    //     const getData = res.data;
+    //     console.log(getData);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }
 
   const handleChangePage = (event, newPage) => {
@@ -221,14 +220,12 @@ const Home = () => {
                       className="p-2 rounded-xl border"
                       type="text"
                       name="text"
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                     />
                     <h1>Deskripsi</h1>
                     <input
                       className="p-2 rounded-xl border"
                       type="text"
                       name="text"
-                      onChange={(e) => setFormData({...formData, description: e.target.value})}
                     />
                   </div>
                 </div>

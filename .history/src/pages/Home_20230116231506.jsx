@@ -37,10 +37,6 @@ const Home = () => {
 
   const classes = useStyles();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    description: ""
-  });
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
@@ -89,20 +85,18 @@ const Home = () => {
       });
   }
 
-  const addBooks = async () => {
-    // console.log(formData)
+  async function updateBooksById(data) {
+    // console.log(data)
     await axios
-      .post(`${Url}/books`, {
-        data: formData,
+      .put(`${Url}/books/${data}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       })
       .then((res) => {
-        // const getData = res.data;
-        console.log(res);
-        // setShowModal(false)
+        const getData = res.data;
+        console.log(getData);
       })
       .catch((err) => {
         console.log(err);
@@ -214,24 +208,20 @@ const Home = () => {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
                   <div className="flex flex-col gap-4">
                     <h5 className="font-medium">Nama Buku</h5>
                     <input
                       className="p-2 rounded-xl border"
                       type="text"
                       name="text"
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                     />
                     <h1>Deskripsi</h1>
                     <input
                       className="p-2 rounded-xl border"
                       type="text"
                       name="text"
-                      onChange={(e) => setFormData({...formData, description: e.target.value})}
                     />
                   </div>
-                </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
@@ -244,7 +234,7 @@ const Home = () => {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => addBooks()}
+                    onClick={() => setShowModal(false)}
                   >
                     Save Changes
                   </button>

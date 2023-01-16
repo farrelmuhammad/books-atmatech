@@ -89,7 +89,7 @@ const Home = () => {
       });
   }
 
-  const addBooks = async () => {
+  async function addBooks() {
     // console.log(formData)
     await axios
       .post(`${Url}/books`, {

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login';
 import RouteApp from './routes';
@@ -12,13 +11,17 @@ function App() {
 
   function logout() {
     localStorage.removeItem("persist:auth");
-    setTimeout(window.location.reload.bind(window.location), 500);
+    console.log('wes logout memek')
   }
 
   const Menus = [
     {
       title: "Dashboard",
       src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Chart_fill.png",
+    },
+    {
+      title: "Books",
+      src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Folder.png",
     },
     {
       title: "Users",

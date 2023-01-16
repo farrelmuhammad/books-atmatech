@@ -8,17 +8,23 @@ import RouteApp from './routes';
 function App() {
   const [open, setOpen] = useState(true);
 
+  const navigate = useNavigate();
+
   const isLoggedIn = useSelector(state => state.auth.token);
 
   function logout() {
     localStorage.removeItem("persist:auth");
-    setTimeout(window.location.reload.bind(window.location), 500);
+    console.log('wes logout memek')
   }
 
   const Menus = [
     {
       title: "Dashboard",
       src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Chart_fill.png",
+    },
+    {
+      title: "Books",
+      src: "https://raw.githubusercontent.com/Sridhar-C-25/sidebar_reactTailwind/main/src/assets/Folder.png",
     },
     {
       title: "Users",

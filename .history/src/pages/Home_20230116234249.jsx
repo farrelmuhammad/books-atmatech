@@ -89,7 +89,7 @@ const Home = () => {
       });
   }
 
-  const addBooks = async () => {
+  async function addBooks() {
     // console.log(formData)
     await axios
       .post(`${Url}/books`, {
@@ -100,8 +100,8 @@ const Home = () => {
         },
       })
       .then((res) => {
-        // const getData = res.data;
-        console.log(res);
+        const getData = res.data;
+        console.log(getData);
         // setShowModal(false)
       })
       .catch((err) => {
